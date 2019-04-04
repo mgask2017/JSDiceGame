@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Dice Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" />
+</head>
+
+<body>
+    <div class="grid-container">
+        <h1 id="title" class="grid-item1">Dice roll game</h1>
+        
+        <a id="info-btn" href="instructions.html"><button class="btn-info">Instructions</button></a>
+
+         <form id="form-signup" class="grid-item4">
+            Enter name:
+            <input id="firstName" type="text" name="firstname" placeholder="Enter name here..." value="">
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <div id="die1" class="dice grid-die1">0</div>
+        <div id="die2" class="dice grid-die2">0</div>    
+        <div id="die3" class="dice3 grid-die3">0</div>
+        <label id="dice3-label">Bonus Die</label>
+
+        <button class="btn btn-success grid-item-button1" onclick="rollDicePlr1()">Roll Dice</button>
+        <button class="btn btn-danger grid-item-button2" type="submit" onClick="refreshPage()">Restart</button>
+        <div class="grid-item" id="status"></div>
+
+        <div id="dice-throw">Dice throw total:</div>
+        <div id="turnnumber" class="stats grid-item"> 0</div>
+
+        <div id="round-no">Round no#:</div>
+        <div id="roundNo" class="stats grid-item">0</div>
+
+        <div id="bouns-score">Bonus score:</div>
+        <div id="bounsScore" class="stats grid-item">0</div>
+
+        <div id="total-score"><strong>Total Score:</strong> </div>
+        <div id="plr1score" class="stats grid-item">0</div>
+    </div> <!-- End of container -->
+
+<!-- ======== Table - results ============= -->
+<div class="container">
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h5 id="tables">Player Score:</h5>
+            </div>
+
+            <div class="bs-component">
+                <table class="table table-hover ">
+                    <thead>
+                        <tr>
+                            <th scope="col">Player name:</th>
+                            <th scope="col">Player score:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active">
+                            <td><ul class="player-name name-style"></ul></td>
+                            <td><ul class="player-score name-style"></ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div> <!-- End of table container -->
+   
+
+<script src="main.js"></script>
+<script src="form.js"></script>
+</body>
+
+</html>
